@@ -1,0 +1,8 @@
+# ---- Build artifacts (regenerable; never source) ----
+rust/target/
+*.exe
+
+# ---- OS / editor cruft ----
+.DS_Store
+Thumbs.db
+*~

@@ -1,0 +1,4 @@
+# Normalise all text to LF in the repo and on checkout. gofmt and rustfmt expect
+# LF, so this keeps the formatting claims true on every platform and silences
+# CRLF conversion noise on Windows.
+* text=auto eol=lf

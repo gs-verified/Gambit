@@ -1,0 +1,9 @@
+[package]
+name = "gambit"
+version = "0.1.0"
+edition = "2021"
+description = "Encode any file as a legal, playable game of chess -- the Code Olympics 2026 gambit tool, ported from Go to Rust."
+
+[[bin]]
+name = "gambit"
+path = "src/main.rs"

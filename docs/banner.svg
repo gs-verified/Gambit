@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" font-family="'Segoe UI', system-ui, sans-serif" role="img" aria-label="gambit — store any file as a game of chess">
+  <defs>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13110c"/>
+      <stop offset="1" stop-color="#1c1710"/>
+    </linearGradient>
+    <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6d77a"/>
+      <stop offset="1" stop-color="#c79a3e"/>
+    </linearGradient>
+    <pattern id="g-board" width="52" height="52" patternUnits="userSpaceOnUse">
+      <rect width="52" height="52" fill="#d9c4a0"/>
+      <rect width="26" height="26" fill="#7c6043"/>
+      <rect x="26" y="26" width="26" height="26" fill="#7c6043"/>
+    </pattern>
+    <filter id="g-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#g-bg)"/>
+
+  <!-- wordmark -->
+  <text x="70" y="150" font-size="84" font-weight="800" fill="url(#g-gold)" filter="url(#g-glow)">gambit</text>
+  <text x="74" y="196" font-size="23" fill="#cbb68a" font-weight="500">store any file as a legal, playable game of chess</text>
+  <text x="74" y="232" font-size="18" font-family="'SFMono-Regular',Consolas,monospace" fill="#8a7350">
+    file → PGN → the same file back, byte-for-byte
+  </text>
+
+  <!-- bitstream feeding the board -->
+  <g font-family="'SFMono-Regular',Consolas,monospace" font-size="22" font-weight="700" fill="#f6d77a">
+    <text x="560" y="150" opacity="0">1<animate attributeName="opacity" dur="4s" begin="0s"   repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.1;0.3;0.5"/>
+      <animate attributeName="x" dur="4s" begin="0s" repeatCount="indefinite" values="560;700" keyTimes="0;0.5"/></text>
+    <text x="560" y="150" opacity="0">0<animate attributeName="opacity" dur="4s" begin="0.4s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.1;0.3;0.5"/>
+      <animate attributeName="x" dur="4s" begin="0.4s" repeatCount="indefinite" values="560;700" keyTimes="0;0.5"/></text>
+    <text x="560" y="150" opacity="0">1<animate attributeName="opacity" dur="4s" begin="0.8s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.1;0.3;0.5"/>
+      <animate attributeName="x" dur="4s" begin="0.8s" repeatCount="indefinite" values="560;700" keyTimes="0;0.5"/></text>
+    <text x="560" y="150" opacity="0">1<animate attributeName="opacity" dur="4s" begin="1.2s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.1;0.3;0.5"/>
+      <animate attributeName="x" dur="4s" begin="1.2s" repeatCount="indefinite" values="560;700" keyTimes="0;0.5"/></text>
+  </g>
+  <text x="690" y="155" font-size="30" fill="#c79a3e">→</text>
+
+  <!-- the board -->
+  <g transform="translate(744,46)">
+    <rect x="-6" y="-6" width="220" height="220" rx="6" fill="#332a1c"/>
+    <rect width="208" height="208" fill="url(#g-board)"/>
+    <rect width="208" height="208" fill="none" stroke="#5a4a2e" stroke-width="1"/>
+
+    <!-- resting pieces (simple discs, no font dependency) -->
+    <circle cx="91" cy="195" r="8" fill="#f4efe2"/>   <!-- a pawn -->
+    <circle cx="195" cy="13" r="8" fill="#2a2620"/>   <!-- a black piece -->
+
+    <!-- the active knight: highlight squares, dashed path, gliding token g1 -> f3 -->
+    <rect x="156" y="156" width="26" height="26" fill="#f6d77a" opacity="0.35"/>
+    <rect x="130" y="104" width="26" height="26" fill="#f6d77a" opacity="0.0">
+      <animate attributeName="opacity" dur="4s" repeatCount="indefinite" values="0;0;0.35;0.35;0" keyTimes="0;0.5;0.72;0.9;1"/>
+    </rect>
+    <path d="M169,169 L143,117" stroke="#f6d77a" stroke-width="2" stroke-dasharray="4 4" opacity="0">
+      <animate attributeName="opacity" dur="4s" repeatCount="indefinite" values="0;0;0.7;0.7;0" keyTimes="0;0.5;0.6;0.9;1"/>
+    </path>
+
+    <g filter="url(#g-glow)">
+      <circle r="11" fill="url(#g-gold)" stroke="#5a4a2e" stroke-width="1.5">
+        <animateTransform attributeName="transform" type="translate" dur="4s" repeatCount="indefinite"
+          values="169,169; 169,169; 143,117; 143,117; 169,169"
+          keyTimes="0;0.5;0.72;0.92;1" calcMode="spline"
+          keySplines="0 0 1 1; .3 0 .2 1; 0 0 1 1; 0 0 1 1"/>
+      </circle>
+      <text x="-6" y="5" font-size="14" font-weight="800" fill="#3a2e16" pointer-events="none">N
+        <animateTransform attributeName="transform" type="translate" dur="4s" repeatCount="indefinite"
+          values="169,169; 169,169; 143,117; 143,117; 169,169"
+          keyTimes="0;0.5;0.72;0.92;1" calcMode="spline"
+          keySplines="0 0 1 1; .3 0 .2 1; 0 0 1 1; 0 0 1 1"/>
+      </text>
+    </g>
+  </g>
+</svg>
