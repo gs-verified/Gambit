@@ -21,8 +21,15 @@
 ![short-name violations](https://img.shields.io/badge/var_names_>3_chars-0-1D9E75?style=flat-square)
 ![line budget](https://img.shields.io/badge/code-472%2F500_lines-1D9E75?style=flat-square)
 ![Code Olympics](https://img.shields.io/badge/Code_Olympics-2026-EF9F27?style=flat-square)
+[![watch the demo](https://img.shields.io/badge/▶_watch-3--min_demo-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/UdtQmsJGL-w)
 
-**[🎬 Money shot](#-the-money-shot) • [🧠 The idea](#-the-idea) • [🧩 Framing](#-framing-arbitrary-lengths) • [♟️ The engine](#️-the-chess-engine) • [🏆 Constraints](#-the-constraints) • [🛡️ Robustness](#️-robustness-30-of-the-score) • [🚀 Run it](#-run-it)**
+**[🎬 Demo](https://youtu.be/UdtQmsJGL-w) • [🧠 The idea](#-the-idea) • [🧩 Framing](#-framing-arbitrary-lengths) • [♟️ The engine](#️-the-chess-engine) • [🏆 Constraints](#-the-constraints) • [🛡️ Robustness](#️-robustness-30-of-the-score) • [🚀 Run it](#-run-it)**
+
+<br/>
+
+<a href="https://youtu.be/UdtQmsJGL-w"><img src="https://img.youtube.com/vi/UdtQmsJGL-w/maxresdefault.jpg" width="70%" alt="▶ Watch the gambit demo on YouTube" /></a>
+
+**▶ [Watch the 3-minute demo](https://youtu.be/UdtQmsJGL-w)**
 
 </div>
 
